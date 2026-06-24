@@ -52654,7 +52654,7 @@ header.sticky {
   background-color: var(--white);
 }
 .skill-items .skill-item-icon-counter .skill-item-icon-bg img {
-  width: 42px;
+  width: 62px;
 }
 @media (max-width: 575px) {
   .skill-items .skill-item-icon-counter .skill-item-icon-bg {
