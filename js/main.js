@@ -1,6 +1,28 @@
 (function ($) {
   "use strict";
 
+  /* global header start */
+  fetch("./mycv/components/header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+
+
+  
+  /* Global header end */
+
+  /* global Footer end */
+
+  fetch("./mycv/components/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+
+  /* global Footer end */
+
+
   let device_width = window.innerWidth;
   var isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Nokia|Opera Mini/i.test(
@@ -311,18 +333,14 @@
             that.buttonY += (that.cursorY - that.buttonY) * 0.2;
             that.contentX += (that.cursorX - that.contentX) * 0.2;
             that.contentY += (that.cursorY - that.contentY) * 0.2;
-            let buttonTranslateX = `translateX(${
-              that.buttonX * that.magnetism
-            }%)`;
-            let buttonTranslateY = `translateY(${
-              that.buttonY * that.magnetism
-            }%)`;
-            let contentTranslateX = `translateX(${
-              (-that.contentX * that.magnetism) / 2
-            }%)`;
-            let contentTranslateY = `translateY(${
-              (-that.contentY * that.magnetism) / 2
-            }%)`;
+            let buttonTranslateX = `translateX(${that.buttonX * that.magnetism
+              }%)`;
+            let buttonTranslateY = `translateY(${that.buttonY * that.magnetism
+              }%)`;
+            let contentTranslateX = `translateX(${(-that.contentX * that.magnetism) / 2
+              }%)`;
+            let contentTranslateY = `translateY(${(-that.contentY * that.magnetism) / 2
+              }%)`;
             that.target.style.transform =
               buttonTranslateX + " " + buttonTranslateY;
             that.content.style.transform =
@@ -662,4 +680,4 @@
   $(document).ready(function () {
     lieon.init();
   });
-})(jQuery);
+})(jQuery);git
