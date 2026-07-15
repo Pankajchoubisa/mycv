@@ -2,19 +2,19 @@
   "use strict";
 
   /* global header start */
-  fetch("./mycv/components/header.html")
+  fetch("./components/header.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("header").innerHTML = data;
     });
 
 
-  
+
   /* Global header end */
 
   /* global Footer end */
 
-  fetch("./mycv/components/footer.html")
+  fetch("./components/footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
@@ -680,4 +680,4 @@
   $(document).ready(function () {
     lieon.init();
   });
-})(jQuery);git
+})(jQuery); git
